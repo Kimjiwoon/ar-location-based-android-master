@@ -37,7 +37,7 @@
                 android:layout_width="65dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
-                android:background="@drawable/outdoor"
+                android:background="@drawable/outdoor_on"
                 android:textColor="#303030"
                 android:text="실외" />
 
@@ -46,7 +46,7 @@
                 android:layout_width="65dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
-                android:background="@drawable/indoor_on"
+                android:background="@drawable/indoor"
                 android:textColor="#ffffff"
                 android:text="실내" />
 

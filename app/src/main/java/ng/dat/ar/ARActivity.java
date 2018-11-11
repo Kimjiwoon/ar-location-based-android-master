@@ -102,9 +102,9 @@ public class ARActivity extends BaseActivity implements SensorEventListener, Loc
 
 
                 currentAPMacAddress = getMacId().toUpperCase();
-                if(currentAPMacAddress.equals("24:DB:ED:ED:C7:2E")){
-                    tvCurrentLocation.setText("원흥관 소나무방");
-                }
+
+                if(currentAPMacAddress.equals("00:07:89:46:08:11"))
+                    tvCurrentLocation.setText("카페베네");
 
             }
         });
@@ -160,11 +160,13 @@ public class ARActivity extends BaseActivity implements SensorEventListener, Loc
 
     @Override
     public void onResume() {
-        super.onResume();
-        requestLocationPermission();
-        requestCameraPermission();
-        registerSensors();
-        initAROverlayView();
+        if(!isInside) {
+            super.onResume();
+            requestLocationPermission();
+            requestCameraPermission();
+            registerSensors();
+            initAROverlayView();
+        }
     }
 
     @Override
@@ -375,7 +377,7 @@ public class ARActivity extends BaseActivity implements SensorEventListener, Loc
             final WifiManager wifiManager = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
             final WifiInfo connectionInfo=wifiManager.getConnectionInfo();
 
-            return connectionInfo.getMacAddress();
+            return connectionInfo.getBSSID();
         }
         return null;
     }
