@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">지금 여기, 동국</string>
+    <string name="load_gps">GPS is loading...</string>
+</resources>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_ar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ng.dat.ar.ARActivity">
+
+    <FrameLayout
+        android:id="@+id/camera_container_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </FrameLayout>
+
+    <SurfaceView
+        android:id="@+id/surface_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_centerHorizontal="true"
+            android:id="@+id/linear1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+
+            <Button
+                android:id="@+id/outdoor"
+                android:layout_width="65dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/outdoor"
+                android:textColor="#303030"
+                android:text="실외" />
+
+            <Button
+                android:id="@+id/indoor"
+                android:layout_width="65dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/indoor_on"
+                android:textColor="#ffffff"
+                android:text="실내" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/linear1">
+
+            <TextView
+                android:id="@+id/tv_current_location"
+                android:layout_width="wrap_content"
+                android:layout_height="114dp"
+                android:layout_margin="20dp"
+                android:maxLines="5"
+                android:lines="5"
+                android:text="@string/load_gps"
+                android:textColor="@android:color/white" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0dp">
+
+            <Button
+                android:id="@+id/reloadLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="2"
+                android:text="위치정보 다시받기" />
+
+
+            <Button
+                android:id="@+id/popupButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="2"
+                android:text="자세한 위치정보" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</FrameLayout>
