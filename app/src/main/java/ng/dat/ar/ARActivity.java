@@ -244,27 +244,6 @@ public class ARActivity extends BaseActivity implements SensorEventListener, Loc
             camera = null;
         }
     }
-    /*class APBackThread extends Thread{
-        @Override
-        public void run(){
-            while(true){
-                currentAPMacAddress=getMacId().toUpperCase();
-                for (HashMap<String, String> entry : mArrayList) {
-                    _mac = entry.get(TAG_MAC).toString();
-                    if (_mac.equals(currentAPMacAddress)) {
-                        _info = entry.get(TAG_INFO).toString();
-                        handler.sendEmptyMessage(0);
-                    }
-                }
-                try {
-                    Thread.sleep(1000);
-                }catch(InterruptedException e){
-                    e.printStackTrace();
-                }
-            }
-        }
-    }
-    */
 
     private void registerSensors() {
         sensorManager.registerListener(this,
